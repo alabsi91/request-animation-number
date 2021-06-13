@@ -94,7 +94,7 @@ You can visit this site to see all available Easing function with visual present
 
 - If you want to provide your own timing-function make sure that the function takes one parameter and returns one value.
 
->```javascript
+```javascript
    function easeInQuad(x) {
     return x * x
     }
