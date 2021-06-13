@@ -70,7 +70,7 @@ interface requestFrameOptions {
  * 
  *  in modern browsers this function will match the client screen refresh rate
  *
- * **Syntax** `requestFrame(options, callback)`
+ * **Syntax** `requestNum(options, callback)`
  *
  *
  * @param {Function} callback
