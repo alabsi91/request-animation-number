@@ -1,5 +1,5 @@
 {
-  "name": "@alabsi91/request-animation-number",
+  "name": "request-animation-number",
   "version": "1.0.2",
   "description": "very light animation library based on requestanimationframe ",
   "main": "request-animation-number.js",
@@ -10,9 +10,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alabsi91/request-animation-number.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "animation",
