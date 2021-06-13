@@ -25,7 +25,7 @@
 
 ### Example
 
-![](https://github.com/alabsi91/request-animation-number/blob/media/20210613_214025~1.gif)
+![](https://github.com/alabsi91/request-animation-number/blob/media/20210613_214717~2.gif)
 
 ```javascript
     import { requestNum } from 'request-animation-number';
@@ -35,7 +35,7 @@
     const animationOptions = {
 		from: [0, 1],
           	to: [90, 2],
-          	duration: 300,
+          	duration: 500,
           	easingFunction: "easeInOutBack"
 	};
 
