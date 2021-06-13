@@ -7,7 +7,7 @@
 
 - Based on ` requestAnimationFrame()` method which generates smooth animation and transitions.
 
-- Matches animation speed on different screens frame rates. *Tested on 60 and 145 frame rate screens*
+- Matches animation speed on different screens refresh rates. *Tested on 60 and 145 refresh rate screens*
 
 - Animate anything takes a value as number.
 > E.g. scrolling , width, color
@@ -19,6 +19,9 @@
 [https://visual-timing-functions.netlify.app/](https://visual-timing-functions.netlify.app/)
 
 [![](https://github.com/alabsi91/request-animation-number/blob/media/20210613_185929~1.gif)](https://visual-timing-functions.netlify.app/)
+
+### Syntax
+- `requestFrame(options, callback)`
 
 ### Example
 
@@ -65,7 +68,7 @@
     });
 ```
 
-###  Options
+###  Options *[Object]*
 
 #### from: *[Number | Array of Numbers]* *[optional]*
 - Start form this number/s.
