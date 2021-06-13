@@ -25,22 +25,23 @@
 
 ### Example
 
+![](https://github.com/alabsi91/request-animation-number/blob/media/20210613_214025~1.gif)
+
 ```javascript
     import { requestNum } from 'request-animation-number';
 
     const element = document.getElementById("square");
 
     const animationOptions = {
-		from: [20, 50], 
-		to: [100, 75], 
-		duration: 250, 
-		easingFunction: "easeInBack"
+		from: [0, 1],
+          	to: [90, 2],
+          	duration: 300,
+          	easingFunction: "easeInOutBack"
 	};
 
-    requestNum(animationOptions, (width, height) => {
-    	element.style.width = width + 'px';
-    	element.style.height = height + 'px';
-    });
+    requestNum(animationOptions, (rotate, scale) => {
+          element.style.transform = `rotate(${rotate}deg) scale(${scale})`;
+        });
 ```
 
 ### How to animate colors
