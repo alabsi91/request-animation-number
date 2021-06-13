@@ -52,16 +52,19 @@
 `rgb(r, g, b) , rgba(r, g, b, a) , hex (e.g. "#ffffff ") , color name (e.g. "red")`
 
 #### Example for colors animation
+
+![](https://github.com/alabsi91/request-animation-number/blob/media/20210613_215930~1.gif)
+
 ```javascript
     import { requestNum, colorToArr } from 'request-animation-number';
 
     const element = document.getElementById("circle");
 
     const animationOptions = {
-		from: colorToArr("black"),  // return [255, 255, 255]
+		from: colorToArr("brown"),  // return [163, 54, 54]
 		to: colorToArr("#000000"),  // return [0, 0, 0]
-		duration: 500,
-		easingFunction: "easeInElastic"
+		duration: 1000,
+		easingFunction: "easeInSine"
 	};
 
     requestNum(animationOptions, (r, g, b) => {
