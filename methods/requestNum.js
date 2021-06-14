@@ -18,7 +18,7 @@
  *
  * @param {(number|Array.<Number>)} options.to
  *
- * end at this number/s
+ * ends at this number/s
  *
  * takes one number or array of numbers
  *
@@ -26,13 +26,13 @@
  *
  * the duration the function will take to change the number (in milliseconds)
  *
- * **Initial Value** `350 ms`
+ * **Initial Value** `350`
  *
  * @param {Number} [options.delay]
  *
  * delay time before starting (in milliseconds)
  *
- * **Initial Value** `0 ms`
+ * **Initial Value** `0`
  *
  * @param {Boolean} [options.yoyo]
  *

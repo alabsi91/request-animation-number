@@ -2,7 +2,7 @@ type requestFrameEasing = "linear" | "easeInSine" | "easeOutSine" | "easeInOutSi
 
 interface requestFrameOptions {
     /**
-     * start form this number/s
+     * starts form this number/s
      *
      * takes one number or array of numbers
      * 
@@ -18,13 +18,13 @@ interface requestFrameOptions {
     /**
      * the duration the function will take to change the number (in milliseconds)
      *
-     * **Initial Value** `350 ms`
+     * **Initial Value** `350`
     */
     duration?: Number,
     /**
-     * wait time before starting (in milliseconds)
+     * Delay time before starting (in milliseconds)
      *
-     * **Initial Value** `0 ms`
+     * **Initial Value** `0`
     */
     delay?: Number,
     /**
@@ -36,19 +36,19 @@ interface requestFrameOptions {
     */
     easingFunction?: requestFrameEasing | Function,
     /**
-     * go back to the start point if true
+     * Go back to the start point if true
      *
      * **Initial Value** `false`
     */
     yoyo?: Boolean,
     /**
-     * the duration to go back to start point (in milliseconds)
+     * The duration to go back to start point (in milliseconds)
      *
      * **Initial Value** `duration`
     */
     yoyoDuration?: Number,
     /**
-     * wait time before starting the yoyo (in milliseconds)
+     * Delay time before starting the yoyo (in milliseconds)
      *
      * **Initial Value** `delay`
     */

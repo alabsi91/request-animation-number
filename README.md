@@ -2,11 +2,11 @@
 
 ### Features
 
-- Light Animation library for modern JavaScript _(6.4KB)_.
+- Light Animation library for modern JavaScript _(22KB)_.
 
 - Based on ` requestAnimationFrame()` method which generates smooth animation and transitions.
 
-- Matches animation speed on different screens refresh rates. _Tested on 60 and 145 refresh rate screens_
+- Matches animation speed on different screens refresh rates. _Tested on 60Hz and 145Hz_
 
 - Animate anything takes a value as number.
 
@@ -23,7 +23,7 @@
 
 ### Syntax
 
-- `requestFrame(options, callback)`
+- `requestNum(options, callback)`
 
 ### Example
 
@@ -48,10 +48,10 @@ requestNum(animationOptions, (rotate, scale) => {
 
 ### How to animate colors
 
-- you can ether use rgb values as an array of number sor you can use `colorToArr()` method to convert color from string to array
-  of numbers which represents rgb values.
+- you can ether use `rgb` values as an array of numbers or you can use `colorToArr()` method to convert color from `string` to
+  array of numbers which represents `rgb` values.
 
-- `colorToArr()` method takes a string and returns an array of number as `[r, g, b, a]`.
+- `colorToArr()` method takes a `string` and returns an array of number as `[r, g, b, a]`.
 - `colorToArr()` accept following formats: `rgb(r, g, b) , rgba(r, g, b, a) , hex (e.g. "#ffffff ") , color name (e.g. "red")`
 
 #### Example for colors animation
@@ -79,8 +79,8 @@ requestNum(animationOptions, (r, g, b) => {
 
 #### from: _[Number | Array of Numbers]_ _[optional]_
 
-- Start form this number/s.
-- Takes one number or array of numbers or if value not provided will be set to 0 automatically.
+- Starts form this number/s.
+- Takes one number or array of numbers or if a value not provided will be set to 0 by default.
 - **Initial Value** `0 | [0, 0 , ...]`
 
 #### to: _[Number | Array of Numbers]_
@@ -90,13 +90,13 @@ requestNum(animationOptions, (r, g, b) => {
 
 #### duration: _[Number]_ _[optional]_
 
-- The duration the function will take to change the number/s (in milliseconds).
-- **Initial Value** `350 ms`.
+- The duration function will take to change the number/s (in milliseconds).
+- **Initial Value** `350`.
 
 #### delay: _[Number]_ _[optional]_
 
-- wait time before starting (in milliseconds).
-- **Initial Value** `0 ms`.
+- Delay time before starting (in milliseconds).
+- **Initial Value** `0`.
 
 #### easingFunction: _[String | Function]_ _[optional]_
 
@@ -128,7 +128,7 @@ function easeInQuad(x) {
 
 #### yoyoDelay: _[Number]\*\*[optional]_
 
-- wait time before starting the yoyo (in milliseconds).
+- Delay time before starting the yoyo (in milliseconds).
 - **Initial Value** `delay`.
 
 #### replay: _[Number]_ _[optional]_
