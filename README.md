@@ -2,7 +2,7 @@
 
 ### Features
 
-- Light Animation library for modern JavaScript _(22KB)_.
+- Light Animation library for modern JavaScript.
 
 - Based on ` requestAnimationFrame()` method which generates smooth animation and transitions.
 
