@@ -75,6 +75,31 @@ requestNum(animationOptions, (r, g, b) => {
 });
 ```
 
+### Sequential animation
+
+- `requestNum()` is an asynchronous function.
+
+- You can use `await` to create sequences of animation by waiting for the first animation to end then starting the next.
+
+#### Example for sequential animation
+
+![](https://github.com/alabsi91/request-animation-number/blob/media/20210614_213742~2.gif)
+
+```javascript
+import { requestNum } from 'request-animation-number';
+
+async function animate() {
+  const circle1 = document.getElementById('circle1');
+  const circle2 = document.getElementById('circle2');
+
+  await requestNum({ to: 350 }, left => (circle1.style.left = left + 'px'));
+
+  requestNum({ to: 350 }, right => (circle2.style.right = right + 'px'));
+}
+
+animate();
+```
+
 ### Options _[Object]_
 
 #### from: _[Number | Array of Numbers]_ _[optional]_

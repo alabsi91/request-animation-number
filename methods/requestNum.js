@@ -223,13 +223,14 @@ export async function requestNum(options, callback) {
           duration: options.yoyoDuration,
           delay: options.yoyoDelay,
           replay: 0,
+          dontWait: true,
         },
         callback
       );
       await wait(options.yoyoDuration + options.yoyoDelay);
       requestNum({ replay: options.replay === -1 ? options.replay : options.replay--, ...options }, callback);
     } else if (options.replay) {
-      requestNum({ replay: options.replay === -1 ? options.replay : options.replay--, ...options }, callback);
+      requestNum({ replay: options.replay === -1 ? options.replay : options.replay--, dontWait: true, ...options }, callback);
     } else if (options.yoyo) {
       requestNum(
         {
@@ -246,4 +247,17 @@ export async function requestNum(options, callback) {
   };
 
   requestAnimationFrame(startAnim);
+  if (!options.dontWait && options.replay !== -1) {
+    if (options.yoyo && options.replay) {
+      await wait(
+        (options.duration + options.yoyoDuration + options.yoyoDelay) * (options.replay + 1) + options.delay * options.replay
+      );
+    } else if (options.replay) {
+      await wait(options.duration * (options.replay + 1) + options.delay * options.replay);
+    } else if (options.yoyo) {
+      await wait(options.duration + options.yoyoDuration + options.yoyoDelay);
+    } else {
+      await wait(options.duration);
+    }
+  }
 }
