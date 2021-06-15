@@ -43,6 +43,7 @@ const animationOptions = {
 
 requestNum(animationOptions, (rotate, scale) => {
   element.style.transform = `rotate(${rotate}deg) scale(${scale})`;
+  // ...
 });
 ```
 
@@ -64,8 +65,8 @@ import { requestNum, colorToArr } from 'request-animation-number';
 const element = document.getElementById('circle');
 
 const animationOptions = {
-  from: colorToArr('brown'), // return [163, 54, 54]
-  to: colorToArr('#000000'), // return [0, 0, 0]
+  from: colorToArr('brown'), // returns [163, 54, 54]
+  to: colorToArr('#000000'), // returns [0, 0, 0]
   duration: 1000,
   easingFunction: 'easeInSine',
 };
@@ -74,7 +75,6 @@ requestNum(animationOptions, (r, g, b) => {
   element.style.backgroundColor = `rgb(${r} ${g} ${b})`;
 });
 ```
-
 ### Sequential animation
 
 - `requestNum()` is an asynchronous function.
@@ -95,6 +95,31 @@ async function animate() {
   await requestNum({ to: 350 }, left => (circle1.style.left = left + 'px'));
 
   requestNum({ to: 350 }, right => (circle2.style.right = right + 'px'));
+}
+
+animate();
+```
+
+- Note that if `replay` set to `-1` it will repeat infinitely.
+
+#### Another way to make sequential animation without using asynchronous function
+
+```javascript
+import { requestNum } from 'request-animation-number';
+
+function animate() {
+  const circle1 = document.getElementById('circle1');
+  const circle2 = document.getElementById('circle2');
+
+  requestNum({ to: 350 }, left => {
+    circle1.style.left = left + 'px';
+
+    // detect when the animation ends
+    if (left === 350) {
+      requestNum({ to: 350 }, right => (circle2.style.right = right + 'px'));
+      // ...
+    }
+  });
 }
 
 animate();
@@ -143,7 +168,7 @@ function easeInQuad(x) {
 
 #### yoyo: _[boolean]_ _[optional]_
 
-- Go back to the start point if true.
+- Animate back to the start point if true.
 - **Initial Value** `false`.
 
 #### yoyoDuration: _[Number]_ _[optional]_

@@ -1,7 +1,7 @@
 {
   "name": "request-animation-number",
-  "version": "1.0.4",
-  "description": "very light animation library based on requestanimationframe ",
+  "version": "1.0.5",
+  "description": "Light animation library based on requestanimationframe ",
   "main": "request-animation-number.js",
   "types": "request-animation-number.d.ts",
   "scripts": {
