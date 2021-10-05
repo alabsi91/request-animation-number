@@ -1,6 +1,6 @@
 {
   "name": "request-animation-number",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Light animation library based on requestanimationframe ",
   "main": "request-animation-number.js",
   "types": "request-animation-number.d.ts",
@@ -13,8 +13,13 @@
   },
   "keywords": [
     "animation",
-    "-",
-    "requestanimationframe"
+    "keyframe",
+    "requestanimationframe",
+    "js",
+    "transition",
+    "ease",
+    "easing",
+    "visual-timing-functions"
   ],
   "author": "Ahmed Al-Absi",
   "license": "ISC",

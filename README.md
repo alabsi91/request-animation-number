@@ -10,11 +10,11 @@
 
 - Animate anything takes a value as number.
 
-  > E.g. scrolling , width, color
+  > E.g. scrolling , width, color ...
 
 - Contains most popular Easing functions with the ability to provide your own.
 
-  > E.g. EaseIn, Ease Out, Ease In Out, .... and more
+  > E.g. Ease In, Ease Out, Ease In Out, .... and more
 
 - You can visit this site to see all available Easing function with visual presentations.
   [https://visual-timing-functions.netlify.app/](https://visual-timing-functions.netlify.app/)
@@ -23,7 +23,7 @@
 
 ### Syntax
 
-- `requestNum(options, callback)`
+- `requestNum(options: Object, callback: Function)`
 
 ### Example
 
@@ -75,6 +75,7 @@ requestNum(animationOptions, (r, g, b) => {
   element.style.backgroundColor = `rgb(${r} ${g} ${b})`;
 });
 ```
+
 ### Sequential animation
 
 - `requestNum()` is an asynchronous function.
