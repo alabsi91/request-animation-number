@@ -1,10 +1,9 @@
 /**
- * takes a string of color and return an array of rgba values
+ * - takes a string of color and return an array of rgba values
  *
  * @param {String} color
  *
- * color format: rgb(r, g, b) | rgba(r, g, b, a) | hex (e.g. "#ffffff ") | color name (e.g. "red")
- *
+ * - color format: rgb(r, g, b) | rgba(r, g, b, a) | hex (e.g. "#ffffff ") | color name (e.g. "red")
  *
  */
 export const colorToArr = color => {

@@ -121,23 +121,23 @@ animate();
 
 #### from: _[ Number | Numbers[] ]_ _[optional]_
 
-- Starts form this number/s.
-- Takes one number or array of numbers or if a value not provided will be set to 0 by default.
+- Animation will starts form this number/s.
+- Takes one number or array of numbers or if a value not provided will be set to `0` by default.
 - **Initial Value** `0 | [0, 0 , ...]`
 
 #### to: _[ Number | Numbers[] ]_
 
-- Ends at this number/s.
+- Animation will ends at this number/s.
 - takes one number or array of numbers.
 
 #### duration: _[Number]_ _[optional]_
 
-- The duration function will take to change the number/s (in milliseconds).
+- The duration the function will take to change the number/s (in milliseconds).
 - **Initial Value** `350`.
 
 #### delay: _[Number]_ _[optional]_
 
-- Delay time before starting (in milliseconds).
+- Delay time before starting the animation (in milliseconds).
 - **Initial Value** `0`.
 
 #### easingFunction: _[ String | Function ]_ _[optional]_
@@ -147,9 +147,8 @@ animate();
 - **Initial Value** `"linear"`.
 - Avaliable Easing functions :
   `"linear", "easeInSine", "easeOutSine", "easeInOutSine", "easeInQuad", "easeOutQuad", "easeInOutQuad", "easeInCubic", "easeOutCubic", "easeInOutCubic", "easeInQuart", "easeOutQuart", "easeInOutQuart", "easeInQuint", "easeOutQuint", "easeInOutQuint", "easeInExpo", "easeOutExpo", "easeInOutExpo", "easeInCirc", "easeOutCirc", "easeInOutCirc", "easeInBack", "easeOutBack", "easeInOutBack", "easeInElastic", "easeOutElastic", "easeInOutElastic", "easeInBounce", "easeOutBounce", "easeInOutBounce"`
-
-- If you want to provide your own timing-function make sure that the function takes one parameter and returns one value.
 - Check [easings.net](https://easings.net/) to learn more.
+- If you want to provide your own timing-function make sure that the function takes one parameter and returns one value.
 
 ```javascript
 function easeInQuad(x) {
@@ -159,21 +158,21 @@ function easeInQuad(x) {
 
 #### yoyo: _[boolean]_ _[optional]_
 
-- Animate back to the start point if true.
+- Animate back to the starting point if `true`.
 - **Initial Value** `false`.
 
 #### yoyoDuration: _[Number]_ _[optional]_
 
-- The duration to go back to start point (in milliseconds).
+- The duration to go back to starting point (in milliseconds).
 - **Initial Value** `duration`.
 
 #### yoyoDelay: _[Number]_ _[optional]_
 
-- Delay time before starting the yoyo (in milliseconds).
+- Delay time before starting the yoyo animation (in milliseconds).
 - **Initial Value** `delay`.
 
 #### replay: _[Number]_ _[optional]_
 
 - Replay count after the first play.
-- infinite if replay value is ` -1`.
+- infinite if replay value is set to `-1`.
 - **Initial Value** `0`.
